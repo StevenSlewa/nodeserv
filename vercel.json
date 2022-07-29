@@ -1,4 +1,16 @@
 {
-    "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
-  }
-  
+  "env": {
+    "MONGODB_URI": "@mongodb-ur"
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ]
+}
